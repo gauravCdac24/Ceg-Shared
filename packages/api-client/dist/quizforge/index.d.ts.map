@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/quizforge/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAmB,KAAK,gBAAgB,EAAE,MAAM,SAAS,CAAC;AACjE,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,UAAU,CAAC;AAEtC,MAAM,MAAM,cAAc,GAAG,KAAK,CAAC;AACnC,wBAAgB,qBAAqB,CAAC,IAAI,EAAE,gBAAgB,gEAE3D;AACD,MAAM,MAAM,eAAe,GAAG,UAAU,CAAC,OAAO,qBAAqB,CAAC,CAAC"}

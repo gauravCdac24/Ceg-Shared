@@ -1,0 +1,50 @@
+{
+  "name": "@ceg/agent-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared AI agent chat panel for CeG monorepo products (SSE streaming, tool steps).",
+  "type": "module",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./agent-panel.css": {
+      "import": "./src/agent-panel.css",
+      "default": "./src/agent-panel.css"
+    },
+    "./agent-caps-admin.css": {
+      "import": "./src/agent-caps-admin.css",
+      "default": "./src/agent-caps-admin.css"
+    },
+    "./prompt-kit.css": {
+      "import": "./src/prompt-kit/prompt-kit.css",
+      "default": "./src/prompt-kit/prompt-kit.css"
+    },
+    "./agent-chat-panel.css": {
+      "import": "./src/agent-chat-panel.css",
+      "default": "./src/agent-chat-panel.css"
+    }
+  },
+  "files": ["src", "README.md"],
+  "scripts": {
+    "test": "node --test src/__tests__/parseSimpleText.test.js src/__tests__/promptKitUtils.test.js src/__tests__/onEventPassthrough.test.js src/__tests__/agentHistoryFuzzy.test.js src/__tests__/useAgentStream.test.js src/__tests__/markdownHrefSafety.test.js src/__tests__/loadingState.test.js"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "framer-motion": ">=11",
+    "lucide-react": ">=0.379.0"
+  },
+  "peerDependenciesMeta": {
+    "framer-motion": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "framer-motion": "^12.38.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}

@@ -1,0 +1,10 @@
+pyproject.toml
+platform_notifications/__init__.py
+platform_notifications/event.py
+platform_notifications/parse.py
+platform_notifications.egg-info/PKG-INFO
+platform_notifications.egg-info/SOURCES.txt
+platform_notifications.egg-info/dependency_links.txt
+platform_notifications.egg-info/requires.txt
+platform_notifications.egg-info/top_level.txt
+tests/test_parse.py

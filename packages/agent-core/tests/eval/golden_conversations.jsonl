@@ -1,0 +1,55 @@
+{"turns": [{"user": "hi #0", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #1", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #2", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #3", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #4", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #5", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #6", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #7", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #8", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #9", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #10", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #11", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #12", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #13", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #14", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #15", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #16", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #17", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #18", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #19", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #20", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #21", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #22", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #23", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #24", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #25", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #26", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #27", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #28", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #29", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #30", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #31", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #32", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #33", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #34", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #35", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #36", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #37", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #38", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #39", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #40", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #41", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #42", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #43", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #44", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #45", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #46", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #47", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #48", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #49", "expected_path": "plan", "expected_intent": "edit"}]}
+{"turns": [{"user": "hi #50", "expected_path": "chat", "expected_intent": "conversational"}]}
+{"turns": [{"user": "create a certificate #51", "expected_path": "agent", "expected_intent": "create"}]}
+{"turns": [{"user": "what can you do #52", "expected_path": "chat", "expected_intent": "capabilities"}]}
+{"turns": [{"user": "generate 500 certs #53", "expected_path": "clarification", "expected_intent": "bulk_operation"}]}
+{"turns": [{"user": "improve the header #54", "expected_path": "plan", "expected_intent": "edit"}]}

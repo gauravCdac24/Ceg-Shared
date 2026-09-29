@@ -1,0 +1,1 @@
+{"version":3,"file":"useCollapsibleSidebar.d.ts","sourceRoot":"","sources":["../src/useCollapsibleSidebar.ts"],"names":[],"mappings":"AAEA,MAAM,MAAM,yBAAyB,GAAG;IACtC,8DAA8D;IAC9D,UAAU,CAAC,EAAE,MAAM,CAAC;IACpB,aAAa,CAAC,EAAE,MAAM,CAAC;IACvB,cAAc,CAAC,EAAE,MAAM,CAAC;CACzB,CAAC;AAEF,wBAAgB,qBAAqB,CAAC,OAAO,GAAE,yBAA8B;;;;;;EAiC5E"}

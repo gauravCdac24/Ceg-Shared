@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/workshopos/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAmB,KAAK,gBAAgB,EAAE,MAAM,SAAS,CAAC;AACjE,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,UAAU,CAAC;AAEtC,MAAM,MAAM,eAAe,GAAG,KAAK,CAAC;AACpC,wBAAgB,sBAAsB,CAAC,IAAI,EAAE,gBAAgB,gEAE5D;AACD,MAAM,MAAM,gBAAgB,GAAG,UAAU,CAAC,OAAO,sBAAsB,CAAC,CAAC"}

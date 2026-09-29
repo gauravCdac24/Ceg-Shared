@@ -1,0 +1,25 @@
+{
+  "name": "@ceg/e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-role Playwright RBAC regression suite (faculty apply, superadmin reject, tenant register/approve, etc.).",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:ceg-faculty": "playwright test --project=ceg-faculty",
+    "test:ceg-superadmin": "playwright test --project=ceg-superadmin",
+    "test:fetchdesk-superadmin": "playwright test --project=fetchdesk-superadmin",
+    "test:fetchdesk-org-admin": "playwright test --project=fetchdesk-org-admin",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "dependencies": {
+    "@ceg/shared-validation": "workspace:*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}

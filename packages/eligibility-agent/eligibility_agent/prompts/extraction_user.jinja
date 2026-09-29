@@ -1,0 +1,22 @@
+Extract a JSON object from this CV/resume markdown.
+
+Schema:
+{
+  "basics": {
+    "name": string|null,
+    "email": string|null,
+    "phone": string|null,
+    "summary": string|null,
+    "profiles": [{"network": string, "url": string}]
+  },
+  "skills": [string],
+  "projects": [{"name": string, "description": string, "url": string|null, "technologies": [string]}],
+  "work": [{"organization": string, "role": string, "start_date": string|null, "end_date": string|null, "summary": string|null, "highlights": [string]}],
+  "education": [{"institution": string, "area": string, "study_type": string|null, "start_date": string|null, "end_date": string|null}],
+  "github_username": string|null
+}
+
+CV MARKDOWN:
+---
+{{ markdown }}
+---

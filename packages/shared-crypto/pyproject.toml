@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ceg-crypto"
+version = "0.1.0"
+description = "Shared field-level encryption helpers for the CeG monorepo"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=42.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ceg_crypto*"]

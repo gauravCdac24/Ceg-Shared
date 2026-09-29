@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "page-studio"
+version = "0.1.0"
+description = "Shared Experience Studio page document logic (Craft.js draft/publish, merge tags)"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["page_studio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

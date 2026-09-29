@@ -1,0 +1,124 @@
+.dynamic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  height: 1.75rem;
+  padding: 0 0.5rem;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition:
+    color 150ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 150ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 150ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 150ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dynamic-btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.dynamic-btn:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ceg-focus-ring, #2563eb);
+}
+
+.dynamic-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.dynamic-btn--primary {
+  border-color: var(--ceg-btn-primary-border, #0f172a);
+  background: var(--ceg-btn-primary-bg, #0f172a);
+  color: var(--ceg-btn-primary-text, #fff);
+}
+
+.dynamic-btn--primary:hover:not(:disabled) {
+  background: var(--ceg-btn-primary-hover, #1e293b);
+}
+
+.dynamic-btn--secondary {
+  border-color: var(--ceg-border-strong, #e2e8f0);
+  background: #fff;
+  color: var(--ceg-text-primary, #0f172a);
+}
+
+.dynamic-btn--secondary:hover:not(:disabled) {
+  border-color: var(--ceg-border-strong, #cbd5e1);
+  background: var(--ceg-surface-muted, #f8fafc);
+}
+
+.dynamic-btn--full {
+  width: 100%;
+}
+
+.dynamic-btn__icon-slot {
+  position: relative;
+  display: inline-grid;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.dynamic-btn__icon-layer {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dynamic-btn__label-slot {
+  position: relative;
+  display: inline-grid;
+  overflow: hidden;
+}
+
+.dynamic-btn__label-layer {
+  grid-column: 1;
+  grid-row: 1;
+  display: block;
+}
+
+.dynamic-btn__measure {
+  pointer-events: none;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  opacity: 0;
+}
+
+.dynamic-btn__measure-icon {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.dynamic-btn__icon--success {
+  color: var(--ceg-success, #16a34a);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dynamic-btn {
+    transition: none;
+  }
+
+  .dynamic-btn:active:not(:disabled) {
+    transform: none;
+  }
+}

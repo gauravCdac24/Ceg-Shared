@@ -1,0 +1,1 @@
+{"version":3,"file":"useLabel.d.ts","sourceRoot":"","sources":["../../src/labels/useLabel.ts"],"names":[],"mappings":"AACA,OAAO,EAGL,KAAK,UAAU,EACf,KAAK,QAAQ,EACb,KAAK,aAAa,EACnB,MAAM,SAAS,CAAC;AAEjB,qEAAqE;AACrE,wBAAgB,QAAQ,CAAC,GAAG,EAAE,QAAQ,EAAE,KAAK,GAAE,UAAwB,GAAG,MAAM,CAE/E;AAED,iEAAiE;AACjE,wBAAgB,gBAAgB,CAAC,GAAG,EAAE,QAAQ,GAAG,aAAa,CAE7D"}

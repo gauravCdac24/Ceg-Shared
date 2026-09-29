@@ -1,0 +1,26 @@
+# Workshop generic eligibility rubric
+
+Score the candidate for a general technical workshop (0–100 total).
+
+## Categories (required — use these exact keys)
+
+### technical_skills (0–40)
+Programming languages, frameworks, and tools demonstrated in skills list and work/projects.
+
+### project_relevance (0–35)
+Complexity and relevance of personal or team projects to software/technical work.
+
+### prior_experience (0–25)
+Internships, jobs, or substantial volunteer technical roles with real deliverables.
+
+## Fairness
+Do NOT score based on institution name, grades, gender, or location.
+
+## Threshold guidance
+- final_score ≥ 60 → APPROVE
+- 40–59 → WAITLIST or MANUAL_REVIEW
+- below 40 → REJECT
+
+{% if event_context %}
+Event context: {{ event_context }}
+{% endif %}

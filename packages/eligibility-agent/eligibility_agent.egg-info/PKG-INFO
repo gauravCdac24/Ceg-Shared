@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: eligibility-agent
+Version: 0.1.0
+Summary: CV/resume screening pipeline for WorkshopOS and QuizForge
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.0
+Requires-Dist: jinja2>=3.1
+Requires-Dist: httpx>=0.27
+Requires-Dist: structlog>=24.1.0
+Requires-Dist: pymupdf>=1.24.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"

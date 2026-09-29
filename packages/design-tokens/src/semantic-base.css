@@ -1,0 +1,19 @@
+/**
+ * Fleet semantic role contract (MOD-001).
+ * Maps product-specific --wos-* / --fd-* tokens to shared --ceg-sem-* roles
+ * when products opt in. Products keep distinct values via product-*.css imports.
+ */
+
+:root {
+  --ceg-sem-font-body: var(--ceg-font-body);
+  --ceg-sem-font-heading: var(--ceg-font-heading);
+  --ceg-sem-font-mono: var(--ceg-font-mono);
+  --ceg-sem-radius-sm: var(--ceg-radius-sm);
+  --ceg-sem-radius-md: var(--ceg-radius-md);
+  --ceg-sem-radius-lg: var(--ceg-radius-lg);
+  --ceg-sem-shadow-sm: var(--ceg-shadow-sm);
+  --ceg-sem-shadow-md: var(--ceg-shadow-md);
+  --ceg-sem-shadow-lg: var(--ceg-shadow-lg);
+  --ceg-sem-motion-fast: 150ms ease-out;
+  --ceg-sem-motion-base: 250ms ease-out;
+}

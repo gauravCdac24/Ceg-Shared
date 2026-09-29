@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ceg-response-envelope
+Version: 0.1.0
+Summary: Shared FastAPI API error envelope for CEG monorepo backends
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.100

@@ -1,0 +1,120 @@
+/**
+ * WorkshopOS product semantics — Calm Modern Operational Workspace (MOD-001).
+ * Teal operational palette; distinct from FetchDesk editorial terminal skin.
+ * Import after @ceg/design-tokens/styles.css in product main.tsx.
+ */
+
+:root {
+  --wos-bg: #f8fafc;
+  --wos-surface: #ffffff;
+  --wos-surface-elevated: #ffffff;
+  --wos-surface-muted: #f1f5f9;
+  --wos-border: #e2e8f0;
+  --wos-border-strong: #cbd5e1;
+  --wos-text: #0f172a;
+  --wos-text-muted: #64748b;
+  --wos-text-disabled: #94a3b8;
+  --wos-primary: #0d9488;
+  --wos-primary-dark: #0f766e;
+  --wos-primary-light: #ccfbf1;
+  --wos-primary-foreground: #ffffff;
+  --wos-accent: #14b8a6;
+  --wos-accent-hover: #0d9488;
+  --wos-success: #059669;
+  --wos-success-light: #ecfdf5;
+  --wos-warning: #d97706;
+  --wos-warning-light: #fffbeb;
+  --wos-danger: #dc2626;
+  --wos-danger-light: #fef2f2;
+  --wos-info: #0284c7;
+  --wos-info-light: #f0f9ff;
+
+  --wos-radius-sm: 6px;
+  --wos-radius-md: 10px;
+  --wos-radius-lg: 14px;
+  --wos-control-height: 40px;
+  --wos-table-row-height: 44px;
+
+  --wos-sidebar-bg: #ffffff;
+  --wos-sidebar-border: var(--wos-border);
+  --wos-sidebar-text: var(--wos-text);
+  --wos-sidebar-text-muted: var(--wos-text-muted);
+  --wos-sidebar-hover: var(--wos-surface-muted);
+  --wos-sidebar-active-bg: var(--wos-primary-light);
+  --wos-sidebar-active-accent: var(--wos-primary);
+  --wos-sidebar-width: 252px;
+  --wos-sidebar-rail-width: 72px;
+
+  --wos-topbar-bg: var(--wos-bg);
+  --wos-topbar-border: var(--wos-border);
+  --wos-topbar-title: var(--wos-text);
+  --wos-topbar-title-muted: var(--wos-text-muted);
+  --wos-topbar-surface: var(--wos-surface);
+  --wos-topbar-surface-border: var(--wos-border);
+
+  --wos-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --wos-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --wos-shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.1);
+
+  --wos-motion-fast: 150ms ease-out;
+  --wos-motion-base: 250ms ease-out;
+
+  --wos-scanner-bg: #0f172a;
+  --wos-scanner-fg: #f8fafc;
+  --wos-scanner-muted: rgba(248, 250, 252, 0.72);
+}
+
+[data-theme="dark"] {
+  --wos-bg: #0f172a;
+  --wos-surface: #1e293b;
+  --wos-surface-elevated: #334155;
+  --wos-surface-muted: #172033;
+  --wos-border: #334155;
+  --wos-border-strong: #475569;
+  --wos-text: #f8fafc;
+  --wos-text-muted: #94a3b8;
+  --wos-text-disabled: #64748b;
+  --wos-primary: #2dd4bf;
+  --wos-primary-dark: #14b8a6;
+  --wos-primary-light: rgba(45, 212, 191, 0.12);
+  --wos-primary-foreground: #0f172a;
+  --wos-accent: #5eead4;
+  --wos-accent-hover: #2dd4bf;
+  --wos-success-light: rgba(52, 211, 153, 0.12);
+  --wos-warning-light: rgba(251, 191, 36, 0.12);
+  --wos-danger-light: rgba(248, 113, 113, 0.12);
+  --wos-info-light: rgba(56, 189, 248, 0.12);
+
+  --wos-sidebar-bg: #131c2e;
+  --wos-sidebar-border: var(--wos-border);
+  --wos-sidebar-text: var(--wos-text);
+  --wos-sidebar-text-muted: var(--wos-text-muted);
+  --wos-sidebar-hover: rgba(255, 255, 255, 0.06);
+  --wos-sidebar-active-bg: var(--wos-primary-light);
+  --wos-sidebar-active-accent: var(--wos-accent);
+
+  --wos-topbar-bg: #0f172a;
+  --wos-topbar-border: #334155;
+  --wos-topbar-title: #f8fafc;
+  --wos-topbar-title-muted: #94a3b8;
+  --wos-topbar-surface: #1e293b;
+  --wos-topbar-surface-border: #334155;
+
+  --wos-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --wos-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --wos-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="high-contrast"] {
+  --wos-bg: #000000;
+  --wos-surface: #0a0a0a;
+  --wos-surface-muted: #111111;
+  --wos-border: #888888;
+  --wos-text: #ffffff;
+  --wos-text-muted: #eeeeee;
+  --wos-primary: #00ffcc;
+  --wos-primary-light: #003333;
+  --wos-primary-foreground: #000000;
+  --wos-sidebar-active-accent: #ffff00;
+  --wos-topbar-title: #ffff00;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@ceg/commercial-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared billing, upgrade wall, and pricing components for CeG products.",
+  "type": "module",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./commercial.css": "./src/commercial.css"
+  },
+  "peerDependencies": {
+    "framer-motion": ">=11",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "react-router-dom": ">=6"
+  },
+  "peerDependenciesMeta": {
+    "framer-motion": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "@ceg/shared-ui": "workspace:*",
+    "framer-motion": "^12.38.0"
+  }
+}

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: commercial-core
+Version: 0.1.0
+Summary: Shared commercial billing, quotas, and feature flags for the CeG monorepo
+Requires-Python: >=3.10
+Requires-Dist: sqlalchemy[asyncio]>=2.0.36
+Requires-Dist: redis[hiredis]>=5.2.0
+Provides-Extra: payments
+Requires-Dist: razorpay>=1.4.2; extra == "payments"

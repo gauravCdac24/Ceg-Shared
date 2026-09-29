@@ -1,0 +1,36 @@
+{
+  "name": "@ceg/ambient-backgrounds",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Theme-aware ambient backgrounds (react-bits + Aura-style gradients) for CEG product surfaces.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    },
+    "./ambient.css": "./src/ambient.css"
+  },
+  "files": ["src", "README.md"],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gsap": "^3.12.7",
+    "ogl": "^1.0.11"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "three": ">=0.160.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/three": "^0.160.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.160.1",
+    "typescript": "^5.7.2"
+  }
+}

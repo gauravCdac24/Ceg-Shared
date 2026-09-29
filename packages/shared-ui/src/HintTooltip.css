@@ -1,0 +1,69 @@
+.ceg-heading-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.ceg-hint {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.ceg-hint__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  opacity: 0.55;
+  cursor: help;
+  line-height: 0;
+}
+
+.ceg-hint__btn:hover,
+.ceg-hint__btn:focus-visible {
+  opacity: 1;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.ceg-hint__tip {
+  position: absolute;
+  z-index: 10050;
+  left: 0;
+  top: calc(100% + 0.45rem);
+  width: max-content;
+  max-width: min(22rem, calc(100vw - 1.5rem));
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  white-space: normal;
+  color: CanvasText;
+  background: Canvas;
+  border: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+  box-shadow: 0 10px 28px color-mix(in srgb, CanvasText 16%, transparent);
+  transform: none;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ceg-hint:hover .ceg-hint__tip,
+.ceg-hint:focus-within .ceg-hint__tip {
+  opacity: 1;
+  visibility: visible;
+}

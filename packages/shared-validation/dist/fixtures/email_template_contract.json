@@ -1,0 +1,49 @@
+{
+    "version": "1",
+    "description": "XI-04 — shared certificate / outreach placeholders across CeG Portal, Workshop OS outreach, Cert Studio bulk email rendering",
+    "cert_studio_html_syntax": {
+        "pattern": "{{variable_key}}",
+        "notes": "Cert Studio `_render_template` does simple {{var}} substitution (see cert-studio-backend `email_templates.py`)"
+    },
+    "workshop_outreach_syntax": {
+        "pattern": "{name}",
+        "known_tokens": ["name", "ref"]
+    },
+    "canonical_variables": [
+        {
+            "key": "recipient_name",
+            "aliases": ["name", "Student_Name", "participant_name"],
+            "description": "Primary addressee for certificate / workshop mail"
+        },
+        {
+            "key": "course_title",
+            "aliases": ["Course_Title", "workshop_title", "event_title"],
+            "description": "Training or event title surfaced in outreach + cert mail"
+        },
+        {
+            "key": "certificate_link",
+            "aliases": ["verify_url", "qr_code"],
+            "description": "HTTPS link for verification portal or deep link stub"
+        },
+        {
+            "key": "issue_date",
+            "aliases": ["Issue_Date"],
+            "description": "ISO or display date on certificate correspondence"
+        },
+        {
+            "key": "certificate_id",
+            "aliases": ["Certificate_ID", "serial"],
+            "description": "Serial or deterministic certificate identifier"
+        },
+        {
+            "key": "org_name",
+            "aliases": [],
+            "description": "Issuer / tenant-facing organisation label"
+        },
+        {
+            "key": "support_email",
+            "aliases": [],
+            "description": "Contact surface for replies (SMTP From or desk inbox)"
+        }
+    ]
+}

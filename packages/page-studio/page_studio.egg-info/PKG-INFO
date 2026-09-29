@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: page-studio
+Version: 0.1.0
+Summary: Shared Experience Studio page document logic (Craft.js draft/publish, merge tags)
+Requires-Python: >=3.10

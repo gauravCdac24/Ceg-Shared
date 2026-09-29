@@ -1,0 +1,25 @@
+{"id":"m001","tenant_id":"tenant-a","query":"What is our brand primary color?","store":[{"key":"brand_primary","value":"#1a3a6b"}],"expect_keys":["brand_primary"]}
+{"id":"m002","tenant_id":"tenant-a","query":"certificate font family","store":[{"key":"font_body","value":"Inter"}],"expect_keys":["font_body"]}
+{"id":"m003","tenant_id":"tenant-a","query":"last template used","store":[{"key":"last_template","value":"tpl-grad-2024"}],"expect_keys":["last_template"]}
+{"id":"m004","tenant_id":"tenant-a","query":"organization logo placement","store":[{"key":"logo_position","value":"top-left"}],"expect_keys":["logo_position"]}
+{"id":"m005","tenant_id":"tenant-a","query":"signatory name on certificates","store":[{"key":"signatory","value":"Director General"}],"expect_keys":["signatory"]}
+{"id":"m006","tenant_id":"tenant-a","query":"border style preference","store":[{"key":"border_style","value":"double gold"}],"expect_keys":["border_style"]}
+{"id":"m007","tenant_id":"tenant-a","query":"default certificate size","store":[{"key":"page_size","value":"A4 landscape"}],"expect_keys":["page_size"]}
+{"id":"m008","tenant_id":"tenant-a","query":"watermark text","store":[{"key":"watermark","value":"CONFIDENTIAL"}],"expect_keys":["watermark"]}
+{"id":"m009","tenant_id":"tenant-a","query":"recipient field label","store":[{"key":"recipient_label","value":"Awarded to"}],"expect_keys":["recipient_label"]}
+{"id":"m010","tenant_id":"tenant-a","query":"secondary accent color","store":[{"key":"accent_color","value":"#c9a227"}],"expect_keys":["accent_color"]}
+{"id":"m011","tenant_id":"tenant-b","query":"brand primary color","store":[{"key":"brand_primary","value":"#0f766e"}],"expect_keys":["brand_primary"]}
+{"id":"m012","tenant_id":"tenant-b","query":"font for titles","store":[{"key":"font_title","value":"Merriweather"}],"expect_keys":["font_title"]}
+{"id":"m013","tenant_id":"tenant-b","query":"department name on cert","store":[{"key":"department","value":"Skill Development"}],"expect_keys":["department"]}
+{"id":"m014","tenant_id":"tenant-b","query":"QR code enabled","store":[{"key":"qr_enabled","value":"true"}],"expect_keys":["qr_enabled"]}
+{"id":"m015","tenant_id":"tenant-b","query":"footer disclaimer text","store":[{"key":"footer_text","value":"Verify at ceg.gov.in"}],"expect_keys":["footer_text"]}
+{"id":"m016","tenant_id":"tenant-a","query":"minimum title font size","store":[{"key":"title_min_pt","value":"28"}],"expect_keys":["title_min_pt"]}
+{"id":"m017","tenant_id":"tenant-a","query":"background texture","store":[{"key":"background","value":"subtle linen"}],"expect_keys":["background"]}
+{"id":"m018","tenant_id":"tenant-a","query":"seal image id","store":[{"key":"seal_asset","value":"asset-seal-001"}],"expect_keys":["seal_asset"]}
+{"id":"m019","tenant_id":"tenant-a","query":"issue date format","store":[{"key":"date_format","value":"DD MMMM YYYY"}],"expect_keys":["date_format"]}
+{"id":"m020","tenant_id":"tenant-a","query":"bulk issuance csv columns","store":[{"key":"csv_columns","value":"name,email,course"}],"expect_keys":["csv_columns"]}
+{"id":"m021","tenant_id":"tenant-b","query":"training program name","store":[{"key":"program_name","value":"Digital Literacy"}],"expect_keys":["program_name"]}
+{"id":"m022","tenant_id":"tenant-b","query":"certificate language","store":[{"key":"language","value":"English"}],"expect_keys":["language"]}
+{"id":"m023","tenant_id":"tenant-a","query":"accessibility contrast ratio target","store":[{"key":"contrast_ratio","value":"4.5:1"}],"expect_keys":["contrast_ratio"]}
+{"id":"m024","tenant_id":"tenant-a","query":"signature block count","store":[{"key":"signature_blocks","value":"2"}],"expect_keys":["signature_blocks"]}
+{"id":"m025","tenant_id":"tenant-b","query":"template category","store":[{"key":"template_category","value":"internship"}],"expect_keys":["template_category"]}

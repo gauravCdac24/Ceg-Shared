@@ -1,0 +1,44 @@
+.ceg-dev-disclosure {
+  margin: 0.75rem 0;
+}
+
+.ceg-dev-disclosure__toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px dashed var(--ceg-border, #cbd5e1);
+  background: var(--ceg-surface-muted, #f8fafc);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.ceg-dev-disclosure__toggle:hover {
+  border-color: var(--ceg-text-secondary, #94a3b8);
+}
+
+.ceg-dev-disclosure__toggle strong {
+  font-size: 0.875rem;
+}
+
+.ceg-dev-disclosure__toggle span {
+  font-size: 0.75rem;
+  color: var(--ceg-text-secondary, #64748b);
+}
+
+.ceg-dev-disclosure__body {
+  margin-top: 0.65rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--ceg-border, #e2e8f0);
+  background: var(--ceg-surface, #fff);
+}
+
+@media (hover: hover) {
+  button:active:not(:disabled), a:active, [role="button"]:active { opacity: 0.92; }
+}

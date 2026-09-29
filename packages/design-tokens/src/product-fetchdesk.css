@@ -1,0 +1,87 @@
+/**
+ * FetchDesk product semantics — Terminal Intelligence editorial skin (MOD-001).
+ * Dark-first monospace-adjacent palette; distinct from WorkshopOS teal ops chrome.
+ * Import after @ceg/design-tokens/styles.css in product main.tsx.
+ */
+
+:root {
+  --fd-font-display: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --fd-font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --fd-font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  --fd-bg: #0d1117;
+  --fd-page-bg: #0d1117;
+  --fd-surface: #161b22;
+  --fd-surface-raised: #1c2128;
+  --fd-surface-2: #21262d;
+  --fd-border: rgba(255, 255, 255, 0.08);
+  --fd-text: #e6edf3;
+  --fd-text-muted: #8b949e;
+
+  --fd-primary: #e6edf3;
+  --fd-primary-hover: #ffffff;
+  --fd-brand: #c9d1d9;
+  --fd-brand-hover: #f0f6fc;
+
+  /** Reserved for crawl running / job in progress ONLY */
+  --fd-accent-live: #3fb950;
+  --fd-accent-live-dim: rgba(63, 185, 80, 0.15);
+
+  --fd-selection-bg: rgba(255, 255, 255, 0.05);
+  --fd-selection-bg-strong: rgba(255, 255, 255, 0.1);
+  --fd-selection-border: rgba(255, 255, 255, 0.14);
+  --fd-selection-ring: rgba(255, 255, 255, 0.12);
+
+  --fd-success: #3fb950;
+  --fd-warn: #d29922;
+  --fd-danger: #f85149;
+
+  --fd-radius: 4px;
+  --fd-radius-sm: 4px;
+  --fd-shadow: none;
+  --fd-shadow-md: none;
+  --fd-shadow-soft: none;
+
+  --fd-header-height: 56px;
+  --fd-topbar-height: 56px;
+  --fd-preheader-height: 36px;
+  --fd-container-max: 1440px;
+  --fd-space-gutter: 24px;
+  --fd-row-height: 32px;
+
+  --fd-text-xs: 11px;
+  --fd-text-sm: 0.8125rem;
+  --fd-text-base: 0.875rem;
+  --fd-text-lg: 1rem;
+  --fd-text-xl: 1.125rem;
+  --fd-text-2xl: 1.25rem;
+  --fd-text-3xl: 1.5rem;
+
+  --fd-motion-micro: 150ms ease-out;
+  --fd-motion-standard: 250ms ease-out;
+
+  --fd-status-review: #1a56db;
+  --fd-status-approved: #0d7f63;
+  --fd-status-rejected: #c81e1e;
+  --fd-status-hold: #d97706;
+
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  --fd-bg: #f6f8fa;
+  --fd-page-bg: #f6f8fa;
+  --fd-surface: #ffffff;
+  --fd-surface-raised: #ffffff;
+  --fd-surface-2: #eaeef2;
+  --fd-border: #d0d7de;
+  --fd-text: #1f2328;
+  --fd-text-muted: #656d76;
+  --fd-primary: #1f2328;
+  --fd-primary-hover: #000000;
+  --fd-brand: #24292f;
+  --fd-brand-hover: #000000;
+  --fd-accent-live: #1a7f37;
+  --fd-accent-live-dim: rgba(26, 127, 55, 0.12);
+  color-scheme: light;
+}

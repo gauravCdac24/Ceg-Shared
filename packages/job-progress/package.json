@@ -1,0 +1,25 @@
+{
+  "name": "@ceg/job-progress",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared job-progress contract (poll + SSE) for all CEG monorepo products.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0",
+    "jsdom": "^25.0.0"
+  }
+}

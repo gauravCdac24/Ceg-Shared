@@ -1,0 +1,122 @@
+.ceg-ambient-stage,
+.ceg-ambient-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.ceg-ambient-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+.ceg-ambient-stage__canvas,
+.ceg-ambient-fill__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ceg-ambient-stage__canvas > *,
+.ceg-ambient-fill__canvas > * {
+  width: 100%;
+  height: 100%;
+}
+
+.ceg-ambient-stage__veil,
+.ceg-ambient-fill__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--ceg-ambient-veil, #000) 12%, transparent) 0%,
+    color-mix(in srgb, var(--ceg-ambient-veil, #000) 28%, transparent) 100%
+  );
+}
+
+html[data-theme="light"] .ceg-ambient-stage__veil,
+html[data-theme="light"] .ceg-ambient-fill__veil {
+  --ceg-ambient-veil: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.72) 100%
+  );
+}
+
+.ceg-ambient-stage__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceg-aura-gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ceg-aura-gradient__grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.ceg-ambient-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ceg-ambient-picker__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  color: inherit;
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.ceg-ambient-picker__btn:hover {
+  border-color: color-mix(in srgb, currentColor 32%, transparent);
+}
+
+.ceg-ambient-picker__btn.is-active {
+  border-color: var(--ceg-ambient-accent, #2563eb);
+  background: color-mix(in srgb, var(--ceg-ambient-accent, #2563eb) 12%, transparent);
+}
+
+.ceg-ambient-picker__swatch {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceg-ambient-stage__canvas canvas,
+  .ceg-ambient-fill__canvas canvas {
+    display: none;
+  }
+}

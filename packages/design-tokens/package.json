@@ -1,0 +1,30 @@
+{
+  "name": "@ceg/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared design tokens and UI primitives for CEG frontends.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./styles.css": "./src/styles.css",
+    "./semantic-base.css": "./src/semantic-base.css",
+    "./product-workshopos.css": "./src/product-workshopos.css",
+    "./product-fetchdesk.css": "./src/product-fetchdesk.css",
+    "./ceg-gov.css": "./ceg-gov.css",
+    "./ceg-interaction-states.css": "./ceg-interaction-states.css"
+  },
+  "files": [
+    "src",
+    "ceg-gov.css",
+    "ceg-interaction-states.css",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node -e \"console.log('design-tokens: no build step required')\"",
+    "typecheck": "node -e \"console.log('design-tokens: no typecheck step required')\"",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.5"
+  }
+}

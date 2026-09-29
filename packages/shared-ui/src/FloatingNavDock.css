@@ -1,0 +1,116 @@
+.ceg-floating-nav-dock {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border, rgba(15, 23, 42, 0.12)) 80%, transparent);
+  background: color-mix(in srgb, var(--bg-surface, #fff) 88%, transparent);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 8px 32px rgba(15, 23, 42, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+.ceg-floating-nav-dock__item {
+  flex-shrink: 0;
+}
+
+.ceg-floating-nav-dock__item > a,
+.ceg-floating-nav-dock__item > button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-secondary, #64748b);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0;
+  font: inherit;
+  transition: color 0.15s ease;
+}
+
+.ceg-floating-nav-dock__item:hover > a,
+.ceg-floating-nav-dock__item:hover > button,
+.ceg-floating-nav-dock__item:focus-within > a,
+.ceg-floating-nav-dock__item:focus-within > button {
+  color: var(--primary, #1a56db);
+  outline: none;
+}
+
+.ceg-floating-nav-dock__item--active > a,
+.ceg-floating-nav-dock__item--active > button {
+  color: var(--primary, #1a56db);
+}
+
+.ceg-floating-nav-dock__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--bg-base, #f8fafc) 70%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border, rgba(15, 23, 42, 0.08)) 60%, transparent);
+}
+
+.ceg-floating-nav-dock__item--active .ceg-floating-nav-dock__icon-wrap {
+  background: color-mix(in srgb, var(--primary, #1a56db) 12%, transparent);
+  border-color: color-mix(in srgb, var(--primary, #1a56db) 25%, transparent);
+}
+
+.ceg-floating-nav-dock__label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  max-width: 4.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ceg-floating-nav-dock:hover .ceg-floating-nav-dock__label,
+.ceg-floating-nav-dock:focus-within .ceg-floating-nav-dock__label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceg-floating-nav-dock__label {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceg-floating-nav-dock {
+    gap: 0.2rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .ceg-floating-nav-dock__label {
+    display: none;
+  }
+}
+
+
+/* deliberate: focus-visible fleet */
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent, var(--gov-primary, #2563eb));
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  button:active:not(:disabled), a:active, [role="button"]:active { opacity: 0.92; }
+}

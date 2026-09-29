@@ -1,0 +1,27 @@
+# QuizForge advanced track gate rubric
+
+Score whether a candidate should access an **advanced difficulty** quiz track (0–100).
+This gates track tier — not workshop admission. Use distinct category names below.
+
+## Categories (required — use these exact keys)
+
+### relevant_skill_match (0–40)
+Alignment between stated skills and advanced track prerequisites (algorithms, systems, depth in primary stack).
+
+### prior_project_complexity (0–35)
+Architecture depth, multi-component projects, non-tutorial work.
+
+### applied_experience_depth (0–25)
+Shipping features, debugging production issues, measurable impact — not job title alone.
+
+## Fairness
+Do NOT use college name, GPA, gender, or geography in scoring.
+
+## Threshold guidance
+- final_score ≥ 70 → APPROVE (grant advanced track access)
+- 50–69 → MANUAL_REVIEW
+- below 50 → REJECT
+
+{% if event_context %}
+Assignment context: {{ event_context }}
+{% endif %}

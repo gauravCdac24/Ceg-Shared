@@ -1,0 +1,290 @@
+.otp-verification-shell {
+  --otp-accent: var(--primary, #1a56db);
+  --otp-accent-rgb: 26, 86, 219;
+  --otp-panel-bg: rgba(255, 255, 255, 0.94);
+  --otp-panel-border: rgba(15, 23, 42, 0.08);
+  --otp-text: #0f172a;
+  --otp-text-muted: #64748b;
+  --otp-ambient-a: rgba(var(--otp-accent-rgb), 0.28);
+  --otp-ambient-b: rgba(16, 185, 129, 0.16);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.otp-verification-shell--dark {
+  --otp-panel-bg: rgba(14, 16, 24, 0.88);
+  --otp-panel-border: rgba(255, 255, 255, 0.1);
+  --otp-text: #f8fafc;
+  --otp-text-muted: rgba(248, 250, 252, 0.62);
+  --otp-ambient-a: rgba(var(--otp-accent-rgb), 0.35);
+  --otp-ambient-b: rgba(255, 107, 0, 0.18);
+  --animated-otp-text: #f8fafc;
+  --animated-otp-box-bg: rgba(255, 255, 255, 0.08);
+  --animated-otp-inner-bg: rgba(0, 0, 0, 0.35);
+  --animated-otp-focus-bg: rgba(var(--otp-accent-rgb), 0.18);
+}
+
+.otp-verification-shell--fullscreen {
+  min-height: min(100vh, 100dvh);
+  padding: 24px 16px;
+}
+
+.otp-verification-shell__ambient {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.otp-verification-shell__ambient::before,
+.otp-verification-shell__ambient::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.75;
+  animation: otp-ambient-drift 14s ease-in-out infinite alternate;
+}
+
+.otp-verification-shell__ambient::before {
+  background: radial-gradient(circle, var(--otp-ambient-a) 0%, transparent 68%);
+  top: -20%;
+  left: -15%;
+}
+
+.otp-verification-shell__ambient::after {
+  background: radial-gradient(circle, var(--otp-ambient-b) 0%, transparent 70%);
+  bottom: -25%;
+  right: -10%;
+  animation-delay: -7s;
+  animation-duration: 18s;
+}
+
+.otp-verification-shell__tunnel {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-radial-gradient(
+      circle at 50% 45%,
+      transparent 0,
+      transparent 18px,
+      rgba(var(--otp-accent-rgb), 0.04) 19px,
+      transparent 20px
+    );
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 40%, #000 20%, transparent 78%);
+  opacity: 0.55;
+  animation: otp-tunnel-pulse 6s ease-in-out infinite;
+}
+
+@keyframes otp-ambient-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(28px, -20px) scale(1.08); }
+}
+
+@keyframes otp-tunnel-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.03); }
+}
+
+.otp-verification-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  padding: 36px 28px 28px;
+  border-radius: 28px;
+  border: 1px solid var(--otp-panel-border);
+  background: var(--otp-panel-bg);
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 24px 64px rgba(15, 23, 42, 0.14);
+  color: var(--otp-text);
+  overflow: hidden;
+}
+
+.otp-verification-panel__handle {
+  width: 44px;
+  height: 4px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.45);
+}
+
+.otp-verification-panel__icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(var(--otp-accent-rgb), 0.12);
+  border: 1px solid rgba(var(--otp-accent-rgb), 0.22);
+  color: var(--otp-accent);
+}
+
+.otp-verification-panel__header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.otp-verification-panel__title {
+  margin: 0 0 10px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--otp-text);
+}
+
+.otp-verification-panel__subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--otp-text-muted);
+}
+
+.otp-verification-panel__email {
+  color: var(--otp-text);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.otp-verification-panel__dev-hint {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-align: center;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  color: #92400e;
+}
+
+.otp-verification-shell--dark .otp-verification-panel__dev-hint {
+  background: color-mix(in srgb, var(--otp-accent, #60a5fa) 18%, rgba(15, 23, 42, 0.9));
+  border-color: color-mix(in srgb, var(--otp-accent, #60a5fa) 42%, transparent);
+  color: #f8fafc;
+}
+
+.otp-verification-shell--dark .otp-verification-panel__dev-hint strong {
+  color: #bfdbfe;
+}
+
+.otp-verification-panel__input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.otp-verification-panel__error {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  color: #b91c1c;
+}
+
+.otp-verification-shell--dark .otp-verification-panel__error {
+  color: #fca5a5;
+}
+
+.otp-verification-panel__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.otp-verification-panel__footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--otp-text-muted);
+}
+
+.otp-verification-panel__resend {
+  margin-left: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--otp-accent);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.otp-verification-panel__resend:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.otp-verification-panel__resend:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.otp-verification-panel__meta {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--otp-text-muted);
+}
+
+.otp-verification-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.otp-verification-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.62);
+  backdrop-filter: blur(6px);
+  animation: otp-modal-backdrop-in 200ms ease;
+}
+
+.otp-verification-modal__panel-wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  animation: otp-modal-panel-in 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes otp-modal-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes otp-modal-panel-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otp-verification-shell__ambient::before,
+  .otp-verification-shell__ambient::after,
+  .otp-verification-shell__tunnel,
+  .otp-verification-modal__backdrop,
+  .otp-verification-modal__panel-wrap {
+    animation: none !important;
+  }
+}
+
+@media (hover: hover) {
+  button:active:not(:disabled), a:active, [role="button"]:active { opacity: 0.92; }
+}

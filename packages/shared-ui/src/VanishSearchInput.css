@@ -1,0 +1,94 @@
+.ceg-vanish-search {
+  position: relative;
+  width: 100%;
+}
+
+.ceg-vanish-search__icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted, #94a3b8);
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceg-vanish-search__field-wrap {
+  position: relative;
+}
+
+.ceg-vanish-search__input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border, rgba(15, 23, 42, 0.12));
+  border-radius: var(--radius-md, 0.65rem);
+  background: var(--bg-surface, #fff);
+  color: var(--text-primary, #0f172a);
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding: 0.55rem 0.75rem;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.ceg-vanish-search--with-icon .ceg-vanish-search__input {
+  padding-left: 2.35rem;
+}
+
+.ceg-vanish-search__input:focus {
+  outline: none;
+  border-color: var(--primary, #1a56db);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary, #1a56db) 18%, transparent);
+}
+
+.ceg-vanish-search__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ceg-vanish-search__placeholder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: var(--text-muted, #94a3b8);
+  font-size: inherit;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ceg-vanish-search--with-icon .ceg-vanish-search__placeholder {
+  left: 2.35rem;
+}
+
+.ceg-vanish-search__canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  border-radius: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceg-vanish-search__input {
+    transition: none;
+  }
+}
+
+
+/* deliberate: focus-visible fleet */
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent, var(--gov-primary, #2563eb));
+  outline-offset: 2px;
+}

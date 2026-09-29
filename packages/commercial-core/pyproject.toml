@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "commercial-core"
+version = "0.1.0"
+description = "Shared commercial billing, quotas, and feature flags for the CeG monorepo"
+requires-python = ">=3.10"
+dependencies = [
+    "sqlalchemy[asyncio]>=2.0.36",
+    "redis[hiredis]>=5.2.0",
+]
+
+[project.optional-dependencies]
+payments = ["razorpay>=1.4.2"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["commercial_core*"]

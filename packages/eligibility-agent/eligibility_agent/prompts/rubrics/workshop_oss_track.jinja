@@ -1,0 +1,35 @@
+# Workshop open-source track rubric
+
+Score for an open-source / community engineering workshop (0–100 total).
+GitHub enrichment data may appear in the profile — use it for open_source only.
+
+## Categories (required — use these exact keys)
+
+### technical_skills (0–25)
+Core languages and engineering fundamentals.
+
+### open_source (0–35)
+Contributions to others' repositories, GSoC-style programs, meaningful PRs — NOT merely owning personal repos.
+
+### project_relevance (0–25)
+Non-trivial projects with documentation or adoption signals.
+
+### prior_experience (0–15)
+Production or internship experience shipping code.
+
+## Fairness
+Do NOT score based on institution, GPA, gender, or location.
+
+## Threshold guidance
+- final_score ≥ 65 → APPROVE
+- 45–64 → WAITLIST or MANUAL_REVIEW
+- below 45 → REJECT
+
+{% if event_context %}
+Event context: {{ event_context }}
+{% endif %}
+
+{% if profile.github_enrichment %}
+GITHUB ENRICHMENT:
+{{ profile.github_enrichment | tojson }}
+{% endif %}

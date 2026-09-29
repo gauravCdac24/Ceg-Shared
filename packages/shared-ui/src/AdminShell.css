@@ -1,0 +1,125 @@
+/* Fleet admin shell — CSS only (CeG has no Tailwind).
+   Desktop: sidebar full height, header + main in the remaining column.
+   Mobile: hamburger/sidebar chrome on top, then header + main. */
+
+[data-ceg-admin-shell] {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+[data-ceg-admin-shell-body] {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+[data-ceg-admin-shell-header] {
+  flex-shrink: 0;
+  z-index: 60;
+  isolation: isolate;
+}
+
+[data-ceg-admin-main] {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+}
+
+@media (min-width: 900px) {
+  [data-ceg-admin-shell] {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  [data-ceg-admin-shell-body] {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+[data-ceg-admin-main]:focus-visible {
+  outline: 2px solid var(--accent, var(--gov-primary, #2563eb));
+  outline-offset: 2px;
+}
+
+[data-ceg-admin-main][data-mobile-nav] {
+  padding-bottom: calc(6.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+[data-ceg-admin-canvas] {
+  position: relative;
+  box-sizing: border-box;
+  margin-inline: auto;
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem 0.75rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  [data-ceg-admin-canvas] {
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  [data-ceg-admin-canvas] {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+}
+
+.ceg-admin-shell,
+.qf-admin-shell {
+  height: 100dvh;
+  max-height: 100dvh;
+}
+
+.ceg-admin-shell-body,
+.qf-admin-shell-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ceg-admin-main-scroll,
+.qf-admin-main-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ceg-skip-link {
+  position: fixed;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 10001;
+  padding: 0.625rem 1.125rem;
+  background: var(--accent, var(--gov-primary, #2563eb));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: var(--radius-sm, 0.375rem);
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.ceg-skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
