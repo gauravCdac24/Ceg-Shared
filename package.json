@@ -1,0 +1,14 @@
+{
+  "name": "ceg-fleet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared CeG fleet packages (@ceg/* TypeScript libraries and Python libraries) used by the portal and sibling products.",
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "build:shared": "pnpm --filter @ceg/shared-validation build && pnpm --filter @ceg/shared-ui build"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

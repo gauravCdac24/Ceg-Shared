@@ -1,0 +1,4 @@
+# Shared fleet packages consumed by CeG Portal, WorkshopOS, QuizForge,
+# Cert Studio, and FetchDesk via Ceg-Shared (junction to this packages folder).
+packages:
+  - 'packages/*'
