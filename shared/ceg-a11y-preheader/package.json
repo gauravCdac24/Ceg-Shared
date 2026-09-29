@@ -1,0 +1,7 @@
+{
+  "name": "@ceg-frontend/ceg-a11y-preheader",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CeG-parity Google Translate + accessibility persistence for shared frontends"
+}

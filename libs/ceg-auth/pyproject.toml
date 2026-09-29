@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ceg-auth"
+version = "0.2.0"
+description = "Shared auth helpers for CEG monorepo products (cookies, OTP, TOTP, HIBP, password policy)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [{ name = "CEG" }]
+dependencies = [
+  "starlette>=0.27",
+  "passlib[bcrypt]>=1.7.4",
+]
+
+[project.optional-dependencies]
+jwt = ["PyJWT>=2.8"]
+totp = ["pyotp>=2.9"]
+redis = ["redis>=5.0"]
+dev = [
+  "pytest>=8.0",
+  "PyJWT>=2.8",
+  "pyotp>=2.9",
+  "passlib[bcrypt]>=1.7.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/ceg"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ceg_auth*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
